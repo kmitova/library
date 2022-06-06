@@ -16,20 +16,15 @@ app.appendChild(cards);
 // window.onload = generateCard();
 
 const addBookBtn = document.getElementById("add-book"); // closes modal
-console.log(addBookBtn)
 
 const addBookModalBtn = document.getElementById('add-book-modal-btn'); // opens modal
+
 const modalContainer = document.getElementById('modal-container')
-console.log(addBookModalBtn)
+
 addBookModalBtn.addEventListener('click', () => {
   modalContainer.classList.add('show')
   addBookModalBtn.classList.add('hide')
 })
-
-// addBookBtn.addEventListener("click", () => {
-//   modalContainer.classList.remove("show");
-// });
-
 
 class Book {
   constructor(title, author, pages, read = false) {
