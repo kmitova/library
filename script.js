@@ -101,14 +101,12 @@ function getInputValues() {
   if (checkboxYes.checked) {
     readBook = "Read";
   }
-  checkboxNo = document.getElementById("not-read");
-  if (checkboxNo.checked) {
+  else {
     readBook = "Not read";
   }
   if (getTitle !== "" && getAuthor !== "" && getPages !== "") {
     inputAvailable = true;
   }
-
   // get value from checkbox ? https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
 }
 
