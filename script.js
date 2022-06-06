@@ -23,7 +23,7 @@ const modalContainer = document.getElementById('modal-container')
 
 addBookModalBtn.addEventListener('click', () => {
   modalContainer.classList.add('show')
-  addBookModalBtn.classList.add('hide')
+  // addBookModalBtn.classList.add('hide')
 })
 
 class Book {
@@ -115,7 +115,7 @@ addBookBtn.addEventListener("click", () => {
   getInputValues();
   addBook();
   // generateCard();
-  addBookModalBtn.classList.remove("hide");
+  // addBookModalBtn.classList.remove("hide");
 });
 
 function addBook() {

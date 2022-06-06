@@ -12,7 +12,7 @@
 }
 
 #modal-container {
-  /* background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .3);
   display: none;
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: center; 
   opacity: 0;
   pointer-events: none; 
   display: none; 
@@ -40,6 +40,19 @@
   max-width: 100%;
 }
 
-#add-book-modal-btn.hide {
+/* #add-book-modal-btn.hide {
   display: none;
+} */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+.footer-content {
+  text-align: center;
 }
