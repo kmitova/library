@@ -6,6 +6,7 @@ let checkboxYes;
 let checkboxNo;
 const addBookBtn = document.getElementById("add-book");
 let card;
+let inputAvailable = false;
 // const cardsContainer = document.getElementsByClassName("cards");
 // let bookCard = document.getElementsByClassName("card");
 let myLibrary = [];
@@ -30,9 +31,6 @@ const harryPotter = new Book(
   300,
   (read = "Not read")
 );
-// console.log(harryPotter.read);
-// console.log(harryPotter.author);
-// console.log(harryPotter.pages);
 myLibrary.push(harryPotter);
 
 function generateCard() {
@@ -57,9 +55,9 @@ function generateCard() {
     if (card) {
       console.log("there is a card");
     }
-    console.log(card.textContent);
+    // console.log(card.textContent);
     cards.appendChild(card);
-    console.log(cards.innerHTML);
+    // console.log(cards.innerHTML);
   });
 }
 function changeStatus(ind) {
@@ -84,15 +82,6 @@ function removeBook(ind) {
   cards.removeChild(card);
   generateCard();
 }
-// let removeBtns = document.getElementsByClassName('remove-btn')
-// removeBtns.forEach((removeBtn) => removeBtn.addEventListener('click', () => {
-//   let indOfBook
-//   removeBook(indOfBook)
-//   generateCard()
-// }))
-
-// let getTitle = document.getElementById('titleInput').value
-// console.log(getTitle)
 
 function getInputValues() {
   getTitle = document.getElementById("titleInput").value;
@@ -106,27 +95,33 @@ function getInputValues() {
   if (checkboxNo.checked) {
     readBook = "Not read";
   }
+  if (getTitle !== "" && getAuthor !== "" && getPages !== "") {
+    inputAvailable = true;
+  }
 
   // get value from checkbox ? https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
 }
 
 addBookBtn.addEventListener("click", () => {
   getInputValues();
-  // console.log(getTitle);
-  // console.log(readBook);
-  // let card = document.createElement('div')
-  // card.setAttribute('class', 'card')
   addBook();
-  generateCard();
-  // myLibrary.push(getTitle)
-  // add the input values to their own instance of the book object
   // generateCard();
 });
 
 function addBook() {
-  let newBook = new Book(getTitle, getAuthor, getPages, readBook);
+  console.log(inputAvailable)
+  if (inputAvailable) {
+      let newBook = new Book(getTitle, getAuthor, getPages, readBook);
   myLibrary.push(newBook);
   console.table(myLibrary);
+  console.table(myLibrary);
+  generateCard()
+  }
+  else {
+    alert('fill in all fields')
+  }
+  
+
 }
 
 // function generateCards() {

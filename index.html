@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <h1>BOOKFULLY</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>BOOKFULLY</h1>
 
-  <!-- <button>+ Add Book</button> -->
-  <div class="add-book-container">
+    <!-- <button>+ Add Book</button> -->
+    <div class="add-book-container">
+      <label for="title">Title</label
+      ><input
+        id="titleInput"
+        type="text"
+        placeholder="e.g. Harry Potter"
+        required
+      />
+      <label for="author">Author</label
+      ><input
+        id="authorInput"
+        type="text"
+        placeholder="e.g. J.K.Rowling"
+        required
+      />
+      <label for="pages">Pages</label
+      ><input id="pagesInput" type="number" placeholder="e.g. 395" required />
+      <label for="read">Have you read this book?</label>
+      <input type="checkbox" name="not-read" id="not-read" checked />No
+      <input type="checkbox" name="read-already" id="read-already" />Yes
+      <button type="submit" id="add-book">Add Book</button>
+    </div>
 
-    <label for="title">Title</label><input id="titleInput" type="text" placeholder="e.g. Harry Potter" required>
-    <label for="author">Author</label><input id="authorInput" type="text" placeholder="e.g. J.K.Rowling" required>
-    <label for="pages">Pages</label><input id="pagesInput" type="number" placeholder="e.g. 395" required>
-    <label for="read">Have you read this book?</label>
-    <input type="checkbox" name="not-read" id="not-read">No
-    <input type="checkbox" name="read-already" id="read-already">Yes
-    <button type="submit" id="add-book">Add Book</button>
-
-  </div>
-
-  <div class="books-container" id="books-container">
+    <div class="books-container" id="books-container">
       <h3>Your books:</h3>
       <!-- <div class="cards"> -->
-        <!-- <div class="card">
+      <!-- <div class="card">
           <p class="book-title">Random book</p>
           <p class="book-author">Some author</p>
           <p class="book-pages">1234 pages</p>
@@ -41,8 +52,8 @@
 
         </div> -->
       <!-- </div> -->
-  </div>
-  <footer></footer>
-  <script src="./script.js"></script>
-</body>
+    </div>
+    <footer></footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
