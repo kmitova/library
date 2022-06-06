@@ -1,11 +1,14 @@
-let getTitle;
-let getAuthor;
-let getPages;
+// let getTitle;
+// let getAuthor;
+// let getPages;
 let readBook;
 let checkboxYes;
 let checkboxNo;
 let card;
 let inputAvailable = false;
+let getTitle = document.getElementById("titleInput")
+let getAuthor = document.getElementById("authorInput")
+let getPages = Number(document.getElementById("pagesInput"))
 // const cardsContainer = document.getElementsByClassName("cards");
 // let bookCard = document.getElementsByClassName("card");
 let myLibrary = [];
@@ -130,7 +133,9 @@ function addBook() {
   else {
     alert('fill in all fields')
   }
-
+  document.getElementById("titleInput").value = "";
+  document.getElementById("authorInput").value = "";
+  document.getElementById("pagesInput").value = "";
 }
 
 // function generateCards() {
