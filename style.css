@@ -10,3 +10,36 @@
 .card {
   border: 2px solid black;
 }
+
+#modal-container {
+  /* background-color: rgba(0, 0, 0, .3);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  opacity: 0;
+  pointer-events: none; 
+  display: none; 
+}
+
+#modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+  display: block;
+
+}
+
+.modal {
+  background-color: white;
+  width: 600px;
+  max-width: 100%;
+}
+
+#add-book-modal-btn.hide {
+  display: none;
+}

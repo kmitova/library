@@ -4,7 +4,6 @@ let getPages;
 let readBook;
 let checkboxYes;
 let checkboxNo;
-const addBookBtn = document.getElementById("add-book");
 let card;
 let inputAvailable = false;
 // const cardsContainer = document.getElementsByClassName("cards");
@@ -15,6 +14,22 @@ cards.classList.add("cards");
 let app = document.querySelector("body");
 app.appendChild(cards);
 // window.onload = generateCard();
+
+const addBookBtn = document.getElementById("add-book"); // closes modal
+console.log(addBookBtn)
+
+const addBookModalBtn = document.getElementById('add-book-modal-btn'); // opens modal
+const modalContainer = document.getElementById('modal-container')
+console.log(addBookModalBtn)
+addBookModalBtn.addEventListener('click', () => {
+  modalContainer.classList.add('show')
+  addBookModalBtn.classList.add('hide')
+})
+
+// addBookBtn.addEventListener("click", () => {
+//   modalContainer.classList.remove("show");
+// });
+
 
 class Book {
   constructor(title, author, pages, read = false) {
@@ -103,9 +118,11 @@ function getInputValues() {
 }
 
 addBookBtn.addEventListener("click", () => {
+  modalContainer.classList.remove("show");
   getInputValues();
   addBook();
   // generateCard();
+  addBookModalBtn.classList.remove("hide");
 });
 
 function addBook() {
@@ -120,7 +137,6 @@ function addBook() {
   else {
     alert('fill in all fields')
   }
-  
 
 }
 
