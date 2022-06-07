@@ -57,10 +57,8 @@ function generateCard() {
       </div>`;
     cards.appendChild(card);
     if (book.read == "Read") {
-      console.log("book is read");
       document.getElementById(`change${i}`).style.backgroundColor = "green";
     } else {
-      console.log("book not read");
       document.getElementById(`change${i}`).style.backgroundColor = "red";
     }
   });
@@ -100,7 +98,6 @@ function getInputValues() {
 }
 
 function addBook() {
-  console.log(inputAvailable);
   if (inputAvailable) {
     let newBook = new Book(getTitle, getAuthor, getPages, readBook);
     myLibrary.unshift(newBook);
