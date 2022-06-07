@@ -9,48 +9,52 @@
   </head>
   <body>
     <h1>BOOKFULLY</h1>
-
     <button id="add-book-modal-btn">+ Add Book</button>
     <div class="add-book-container" id="modal-container">
       <div class="modal">
         <div class="modal-content">
-
-
-
           <label for="title">Title</label
-        ><input
-          id="titleInput"
-          type="text"
-          placeholder="e.g. Harry Potter"
-          required autocomplete="off"
-        />
-        <label for="author">Author</label
-        ><input
-          id="authorInput"
-          type="text"
-          placeholder="e.g. J.K.Rowling"
-          required autocomplete="off"
-        />
-        <label for="pages">Pages</label
-        ><input id="pagesInput" type="number" placeholder="e.g. 395" required autocomplete="off" />
-        <div class="checkbox">
-
-          <label for="read">Have you read this book?</label>
-        <!-- <input type="checkbox" name="not-read" id="not-read" checked />No -->
-        <input type="checkbox" name="read-already" id="read-already" />
+          ><input
+            id="titleInput"
+            type="text"
+            placeholder="e.g. Harry Potter"
+            required
+            autocomplete="off"
+          />
+          <label for="author">Author</label
+          ><input
+            id="authorInput"
+            type="text"
+            placeholder="e.g. J.K.Rowling"
+            required
+            autocomplete="off"
+          />
+          <label for="pages">Pages</label
+          ><input
+            id="pagesInput"
+            type="number"
+            placeholder="e.g. 395"
+            required
+            autocomplete="off"
+          />
+          <div class="checkbox">
+            <label for="read">Have you read this book?</label>
+            <input type="checkbox" name="read-already" id="read-already" />
+          </div>
+          <button type="submit" id="add-book">Add Book</button>
         </div>
-        
-        <button type="submit" id="add-book">Add Book</button>
-        </div>
-    
       </div>
     </div>
     <h3>Your books:</h3>
-    <div class="books-container" id="books-container">
-      
-    </div>
-    <footer><p class="footer-content">by kmitova add github svg with link to repo</p>
-      </footer>
+    <div class="books-container" id="books-container"></div>
+    <footer>
+      <p class="footer-content">
+        by kmitova
+        <a href="https://github.com/kmitova/library" target="_blank"
+          ><img src="./github_logo.svg" alt=""
+        /></a>
+      </p>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
