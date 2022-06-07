@@ -5,10 +5,12 @@ let readBook;
 let checkboxYes;
 let checkboxNo;
 let card;
+let status;
 let inputAvailable = false;
 let getTitle = document.getElementById("titleInput")
 let getAuthor = document.getElementById("authorInput")
 let getPages = Number(document.getElementById("pagesInput"))
+
 // const cardsContainer = document.getElementsByClassName("cards");
 // let bookCard = document.getElementsByClassName("card");
 let myLibrary = [];
@@ -68,11 +70,26 @@ function generateCard() {
     if (card) {
       console.log("there is a card");
     }
+    // console.log(document.getElementById(`change${i}`));
+
     // console.log(card.textContent);
     cards.appendChild(card);
+    if (book.read == 'Read') {
+      console.log("book is read");
+      // let contents = document.getElementsByClassName('read-status')
+      // console.log(contents.textContent)
+      // document.getElementById(`change${i}`).style.backgroundColor = "green";
+      document.getElementById(`change${i}`).style.backgroundColor = 'green'
+    } else {
+      console.log("book not read");
+      // document.getElementById(`change${i}`).style.backgroundColor = "red";
+      document.getElementById(`change${i}`).style.backgroundColor = 'red'
+    }
     // console.log(cards.innerHTML);
   });
 }
+
+
 function changeStatus(ind) {
   console.log("in status function");
   let status = document.getElementById(`change${ind}`);
@@ -80,9 +97,12 @@ function changeStatus(ind) {
   console.log(status.textContent);
   if (status.textContent === "Read") {
     console.log("current is read");
+    
     status.textContent = "Not read";
+    status.style.backgroundColor = "red";
   } else {
     status.textContent = "Read";
+    status.style.backgroundColor = 'green'
   }
   // console.log(status)
 }
@@ -103,6 +123,7 @@ function getInputValues() {
   checkboxYes = document.getElementById("read-already");
   if (checkboxYes.checked) {
     readBook = "Read";
+    
   }
   else {
     readBook = "Not read";

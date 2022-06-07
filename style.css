@@ -1,3 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em;
+  font-size: 2.3rem;
+  letter-spacing: 0.1em;
+}
+
+#add-book-modal-btn {
+  margin: auto;
+  border: none;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.5rem;
+  padding: .5em;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+#add-book-modal-btn:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+h3 {
+  margin-left: 4em;
+  letter-spacing: .05em;
+  font-size: 1.5rem;
+}
+
+
 .add-book-container {
   width: 20%;
 }
@@ -17,6 +55,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  margin: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -24,7 +63,11 @@
   justify-content: center; 
   opacity: 0;
   pointer-events: none; 
-  display: none; 
+  /* display: flex;
+  justify-content: center; */
+  
+  
+  /* display: none;  */
 }
 
 #modal-container.show {
@@ -36,8 +79,35 @@
 
 .modal {
   background-color: white;
-  width: 600px;
+  width: 200px;
   max-width: 100%;
+  padding: 2em; 
+  margin: auto;
+  margin-top: 7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+
+}
+label {
+  display: block;
+}
+button {
+  display: block;
+  cursor: pointer;
+}
+.checkbox {
+  display: flex;
+  gap: .4em;
+  align-items: center;
+}
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    accent-color: white;
 }
 
 /* #add-book-modal-btn.hide {
@@ -51,8 +121,60 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
+  background-color: grey;
 }
 .footer-content {
   text-align: center;
+}
+
+.books-container {
+  display: flex;
+    justify-content: center;
+}
+.cards {
+  margin: 2em;
+  overflow: hidden;
+  padding-bottom: 3em;
+  
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+}
+
+.card-content {
+  padding: .5em;
+  padding-top: 0;
+}
+
+.card-content p {
+  font-size: 1.4rem;
+  padding: .3em;
+  text-align: center;
+} 
+
+.remove-btn {
+  display: block;
+  margin: auto;
+  border: none;
+  font-size: 1.4rem;
+  padding: .3em 2em;
+  border-radius: 5px;
+  color: white;
+  background-color: lightgrey;
+  margin-bottom: 1em;
+}
+
+.read-status {
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: .3em 2em;
+  border-radius: 5px;
+  color: white;
+  /* background-color: red; */
 }
