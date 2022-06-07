@@ -121,7 +121,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: grey;
+  background-color: #f4f4f5;
 }
 .footer-content {
   text-align: center;
@@ -145,17 +145,22 @@ footer {
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: none;
+  background-color: #e0f2fe;
 }
 
 .card-content {
   padding: .5em;
   padding-top: 0;
+  
 }
 
 .card-content p {
   font-size: 1.4rem;
-  padding: .3em;
+  padding: .3em .5em;
   text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  
 } 
 
 .remove-btn {
@@ -166,8 +171,9 @@ footer {
   padding: .3em 2em;
   border-radius: 5px;
   color: white;
-  background-color: lightgrey;
+  background-color: #fde047;
   margin-bottom: 1em;
+  font-family: 'Sora', sans-serif;
 }
 
 .read-status {
