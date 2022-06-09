@@ -20,6 +20,7 @@
             placeholder="e.g. Harry Potter"
             required
             autocomplete="off"
+            name="'title"
           />
           <label for="author">Author</label
           ><input
@@ -28,6 +29,7 @@
             placeholder="e.g. J.K.Rowling"
             required
             autocomplete="off"
+            name="'author"
           />
           <label for="pages">Pages</label
           ><input
@@ -36,17 +38,20 @@
             placeholder="e.g. 395"
             required
             autocomplete="off"
+            name="pages"
           />
           <div class="checkbox">
             <label for="read">Have you read this book?</label>
-            <input type="checkbox" name="read-already" id="read-already" />
+            <input type="checkbox" name="read-already" id="read-already" name="checked" />
           </div>
           <button type="submit" id="add-book">Add Book</button>
         </div>
       </div>
     </div>
     <h3>Your books:</h3>
-    <div class="books-container" id="books-container"></div>
+    <div class="books-container" id="books-container">
+      <div class="cards"></div>
+    </div>
     <footer>
       <p class="footer-content">
         by kmitova

@@ -189,7 +189,7 @@ img:hover {
   }
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 400px) {
   h3 {
     text-align: center;
     margin-left: 0;
@@ -197,6 +197,7 @@ img:hover {
   .cards {
     display: grid;
     grid-template-columns: 0.3fr;
+    justify-content: center;
     gap: 4em;
     grid-template-columns: repeat(auto-fit, minmax(300px, 0.3fr));
   }
